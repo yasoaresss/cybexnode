@@ -70,7 +70,6 @@
   .btn-login { border-color: #f85149; color: #f85149; }
   .btn-login:hover { background: rgba(248,81,73,.1); }
 
-  /* MAIN */
   #main {
     flex: 1;
     display: grid;
@@ -242,7 +241,9 @@
   .popup-key { color: #6e7681; }
   .popup-val { color: #c9d1d9; }
 
-  .mk { width: 8px; height: 8px; border-radius: 50%; border: 1px solid rgba(255,255,255,.25); }
+  .mk { width: 8px; height: 8px; border-radius: 50%; border: 1px solid rgba(255,255,255,.15); animation: mkpulse 3s ease-in-out infinite; }
+  @keyframes mkpulse { 0%,100%{opacity:1} 50%{opacity:.45} }
+  .mk.hp { animation-duration: 2s; }
   .mk.crit { background: #f85149; }
   .mk.high { background: #e3b341; }
   .mk.med  { background: #d29922; }
@@ -444,10 +445,9 @@
   <div class="panel" id="center-panel" style="position:relative;display:flex;flex-direction:column;">
     <div id="map-header">
       <span>Mapa de Ataques — Brasil</span>
-      <button class="fpill">Por estado</button>
-  
+        <button class="fpill active">Por estado</button>
       <div class="filter-pills">
-        <button class="fpill active">Todos</button>
+        <button class="fpill">Todos</button>
         <button class="fpill">Crítico</button>
         <button class="fpill">DDoS</button>
         <button class="fpill">Brute Force</button>
@@ -539,16 +539,7 @@ attacks.forEach(a => {
     html: `<div class="mk ${a.sev === 'hp' ? 'hp' : a.sev === 'critical' ? 'crit' : a.sev === 'high' ? 'high' : a.sev === 'medium' ? 'med' : 'low'}"></div>`,
     iconSize: [8,8], iconAnchor: [4,4]
   });
-  L.marker([a.lat, a.lng], {icon}).bindPopup(`
-    <div class="popup-body">
-      <div class="popup-title">${a.city}</div>
-      <div><span class="popup-key">Tipo: </span><span class="popup-val">${a.type}</span></div>
-      <div><span class="popup-key">Severidade: </span><span class="popup-val" style="color:${sevColor[a.sev]}">${sevLabel[a.sev]}</span></div>
-      <div><span class="popup-key">IP Origem: </span><span class="popup-val">${a.src}</span></div>
-      <div><span class="popup-key">IP Destino: </span><span class="popup-val">${a.dst}</span></div>
-      <div><span class="popup-key">Porta: </span><span class="popup-val">${a.port || 'N/A'}</span></div>
-      <div><span class="popup-key">País: </span><span class="popup-val">${a.country}</span></div>
-    </div>`, {maxWidth:240}).addTo(map);
+  L.marker([a.lat, a.lng], {icon, interactive: false}).addTo(map);
 });
 
 [[[-23.55,-46.63],[-22.90,-43.17],'critical'],
