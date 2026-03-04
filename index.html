@@ -489,7 +489,9 @@ setInterval(tick, 1000); tick();
 const map = L.map('map', { center: [-14.2, -51.9], zoom: 4, zoomControl: true });
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
   attribution: '© OpenStreetMap, © CARTO', maxZoom: 18
-}).addTo(map);
+}).addTo(map); 
+ //opção de deixar em modo claro
+
 
 async function loadBorder() {
   const style = { color:'#1a6aa0', weight:1.5, opacity:.9, fillColor:'#051525', fillOpacity:.4 };
