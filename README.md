@@ -21,7 +21,7 @@ cybexnode-frontend → Dashboard Next.js (React + Leaflet + Chart.js)
 - 📍 **Drawer por estado** com detalhes:
   - tipos de ataque
   - top IPs
-  - atividade por hora  
+  - total de atividade a cada 12h  
 - 🧬 **Integração com CVEs** via **CISA KEV**  
 - 🔑 **Autenticação por API Key** (`X-Api-Key`) para sensores honeypot  
 
