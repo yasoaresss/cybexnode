@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CybexNode.Api", "CybexNode.Api\CybexNode.Api.csproj", "{DCCDB4DE-F3D1-44D4-A0D2-9B16373AC785}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CybexNode.Worker", "CybexNode.Worker\CybexNode.Worker.csproj", "{9C8F02E1-9ACA-444D-AC43-AACA8AB94293}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCCDB4DE-F3D1-44D4-A0D2-9B16373AC785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCCDB4DE-F3D1-44D4-A0D2-9B16373AC785}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCCDB4DE-F3D1-44D4-A0D2-9B16373AC785}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCCDB4DE-F3D1-44D4-A0D2-9B16373AC785}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C8F02E1-9ACA-444D-AC43-AACA8AB94293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C8F02E1-9ACA-444D-AC43-AACA8AB94293}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C8F02E1-9ACA-444D-AC43-AACA8AB94293}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C8F02E1-9ACA-444D-AC43-AACA8AB94293}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

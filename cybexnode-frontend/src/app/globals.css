@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Reset ── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; overflow: hidden; font-family: Arial, Helvetica, sans-serif; font-size: 13px; }
+body { background: #0d1117; color: #c9d1d9; }
+
+/* ── Animations ── */
+@keyframes blink      { 0%,100%{ opacity:1 } 50%{ opacity:.3 } }
+@keyframes mkpulse    { 0%,100%{ opacity:1 } 50%{ opacity:.45 } }
+@keyframes tickscroll { 0%{ transform:translateX(0) } 100%{ transform:translateX(-50%) } }
+@keyframes critpulse  { 0%,100%{ transform:scale(1);   box-shadow:0 0 8px rgba(255,32,86,0.6)  }
+                        50%{     transform:scale(1.45); box-shadow:0 0 16px rgba(255,32,86,0.9) } }
+@keyframes spin        { to{ transform:rotate(360deg) } }
+@keyframes flashborder { 0%,100%{ border-left-color:transparent } 20%,60%{ border-left-color:#58a6ff } 40%,80%{ border-left-color:rgba(88,166,255,.4) } }
+@keyframes newpulse    { 0%{ transform:scale(3); opacity:0 } 40%{ transform:scale(1.4); opacity:1 } 100%{ transform:scale(1); opacity:1 } }
+@keyframes pingpulse   { 0%{ transform:scale(0.3); opacity:0.8 } 100%{ transform:scale(1); opacity:0 } }
+/* ── Attack arcs — animação gerenciada via JS em Dashboard.tsx ── */
+.attack-arc { stroke-linecap: round; }
+
+/* ── Scrollbars ── */
+.panel-body::-webkit-scrollbar       { width: 4px; }
+.panel-body::-webkit-scrollbar-thumb { background: #30363d; }
+
+/* ── Leaflet overrides ── */
+.leaflet-container { background: #0d1117 !important; }
+.leaflet-popup-content-wrapper {
+  background: #161b22 !important;
+  border: 1px solid #30363d !important;
+  border-radius: 4px !important;
+  color: #c9d1d9 !important;
+  box-shadow: none !important;
+}
+.leaflet-popup-tip            { background: #161b22 !important; }
+.leaflet-control-zoom         { border: 1px solid #30363d !important; }
+.leaflet-control-zoom a       { background: #161b22 !important; color: #8b949e !important; border-bottom: 1px solid #30363d !important; }
+.leaflet-control-zoom a:hover { background: #21262d !important; }

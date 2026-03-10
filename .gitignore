@@ -1,0 +1,55 @@
+# ─── Secrets / Configuration ─────────────────────────────────────────────────
+appsettings.json
+appsettings.*.json
+!appsettings.example.json
+**/appsettings.json
+**/appsettings.*.json
+!**/appsettings.example.json
+.env
+.env.*
+**/.env
+**/.env.*
+
+# ─── Build output ─────────────────────────────────────────────────────────────
+**/bin/
+**/obj/
+**/publish/
+**/out/
+
+# ─── Packages / dependencies ──────────────────────────────────────────────────
+**/node_modules/
+**/.pnp
+**/.pnp.js
+**/.yarn/install-state.gz
+
+# ─── Next.js ──────────────────────────────────────────────────────────────────
+**/.next/
+**/build/
+**/*.tsbuildinfo
+**/next-env.d.ts
+
+# ─── Databases / binaries ────────────────────────────────────────────────────
+*.mmdb
+
+# ─── Deploy artifacts / zip files ────────────────────────────────────────────
+*.zip
+
+# ─── PowerShell / deploy scripts (local ops only) ────────────────────────────
+*.ps1
+
+# ─── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ─── Misc ─────────────────────────────────────────────────────────────────────
+.DS_Store
+*.pem
+.vercel
+/coverage
+.claude/
+
+# ─── Azure / Kudu ─────────────────────────────────────────────────────────────
+web.config
+run.sh

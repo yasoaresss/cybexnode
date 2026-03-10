@@ -1,0 +1,6 @@
+@CybexNode.Api_HostAddress = http://localhost:5277
+
+GET {{CybexNode.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
